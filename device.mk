@@ -6,27 +6,7 @@
 
 DEVICE_PATH := device/xiaomi/blossom
 
-# Enable userspace reboot    kitsunee02
-    android_device_xiaomi_blossom
-
-Repository navigation
-
-    Code
-    Pull requests
-    Agents
-    Actions
-    Projects
-    Wiki
-    Security and quality
-    Insights
-    Settings
-
-kitsunee02
-android_device_xiaomi_blossom
-Public
-forked from MistOS-Devices/android_device_xiaomi_blossom
-
-
+# Enable userspace reboot
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
 #Disable VINTF kernel enforcement and override kernel version
