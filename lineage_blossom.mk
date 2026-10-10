@@ -41,29 +41,13 @@ BOMB_AUDIOFX := true
 
 #Bomb malloc and aperture
 TARGET_DISABLE_MATLOG := true
-PRODUCT_NO_CAMERA := true
 
 # always append time of day
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 
 #Include some stuff
-TARGET_INCLUDE_VIA := false
+TARGET_INCLUDE_VIA := true
 TARGET_INCLUDE_REVAMPED := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_INCLUDE_DOLBY := true
-
-#Overwrite build fingerprint
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="blossom-user 16 BP4A.260105.004.E1 14587043 release-keys" \
-    BuildFingerprint=xiaomi/blossom/blossom:16/BP4A.260105.004.E1/14587043:user/release-keys \
-    DeviceProduct=xiaomi
-
-#Mist stuff
-#Mist maintainer
-MISTOS_MAINTAINER := HaiKito
-
-#Gms
-TARGET_DEFAULT_PIXEL_LAUNCHER := false
-TARGET_INCLUDE_LAWNCHAIR := false
-BYPASS_CHARGE_SUPPORTED := false
+TARGET_INCLUDE_DOLBY := false
