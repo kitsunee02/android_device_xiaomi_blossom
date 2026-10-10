@@ -150,9 +150,6 @@ PRODUCT_COPY_FILES += \
 #Speaker_layout_channel_mask field
 $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
-PRODUCT_PACKAGES += \
-    libstagefright_softomx_plugin.vendor
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.blossom
@@ -238,7 +235,7 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libstagefright_softomx_plugin.vendor
+    libstagefright_softomx_plugin.vendor \
     libavservices_minijail.vendor
 
 
