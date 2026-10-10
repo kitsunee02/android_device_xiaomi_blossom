@@ -6,7 +6,27 @@
 
 DEVICE_PATH := device/xiaomi/blossom
 
-# Enable userspace reboot
+# Enable userspace reboot    kitsunee02
+    android_device_xiaomi_blossom
+
+Repository navigation
+
+    Code
+    Pull requests
+    Agents
+    Actions
+    Projects
+    Wiki
+    Security and quality
+    Insights
+    Settings
+
+kitsunee02
+android_device_xiaomi_blossom
+Public
+forked from MistOS-Devices/android_device_xiaomi_blossom
+
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
 #Disable VINTF kernel enforcement and override kernel version
@@ -236,10 +256,21 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/system_ext,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/properties) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/vendor,$(TARGET_COPY_OUT_VENDOR)/etc/properties)
 
+# Media
+PRODUCT_PACKAGES += \
+    libstagefright_softomx_plugin.vendor
+    libavservices_minijail.vendor
+
+
 # VNDK
 PRODUCT_PACKAGES += \
+    libutils-v30 \
     libutils-v32 \
     libui-v32
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.common-V2-ndk_platform.so \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common-V2-ndk_platform.so
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
@@ -286,9 +317,6 @@ PRODUCT_PACKAGES += \
     libpng.vendor \
     libutilscallstack.vendor
 
-# Media
-PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
