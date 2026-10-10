@@ -5,12 +5,7 @@
     "branch": "A16-qpr2",
     "remote": "gitlab"
   },
-  {
-    "repository": "HaiKito18/device_xiaomi_blossom-kernel",
-    "target_path": "device/xiaomi/blossom-kernel",
-    "branch": "Asuna",
-    "remote": "github"
-  },
+
   {
     "repository": "haikito18/android_hardware_mediatek",
     "target_path": "hardware/mediatek",
@@ -24,21 +19,9 @@
     "remote": "github"
   },
   {
-    "repository": "HaiKito18/vendor_xiaomi_miuicamera",
-    "target_path": "vendor/xiaomi/miuicamera",
-    "branch": "main",
-    "remote": "github"
-  },
-  {
     "repository": "HaiKito18/ViaBrowser",
     "target_path": "packages/apps/ViaBrowser",
     "branch": "main",
     "remote": "github"
-  },
-  {
-    "repository": "HaiKito18/Dolby-blossom",
-    "target_path": "hardware/dolby",
-    "branch": "sony-1.5",
-    "remote": "codeberg"
   }
 ]
