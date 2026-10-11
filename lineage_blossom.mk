@@ -36,20 +36,9 @@ TARGET_ENABLE_BLUR := true
 #Quicktap
 TARGET_SUPPORTS_QUICK_TAP := true
 
-#Nuke Aperture
-PRODUCT_NO_CAMERA := true
 
 #Nerver complie this
 TARGET_EXCLUDES_AUDIOFX := true
 TARGET_INCLUDE_VIA := false
 TARGET_INCLUDE_REVAMPED := false
 
-#Mist maintainer
-MISTOS_MAINTAINER := HaiKito
-
-#Gms
-WITH_GMS := false
-TARGET_USES_MINI_GAPPS := false
-TARGET_DEFAULT_PIXEL_LAUNCHER := false
-TARGET_INCLUDE_LAWNCHAIR := false
-BYPASS_CHARGE_SUPPORTED := false
