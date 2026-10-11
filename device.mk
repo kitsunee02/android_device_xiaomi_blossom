@@ -233,6 +233,7 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
+    libutils-v30 \
     libutils-v32 \
     libui-v32
 
@@ -254,6 +255,11 @@ PRODUCT_PACKAGES += \
 # Biometrics
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor:32
+
+# Media
+PRODUCT_PACKAGES += \
+    libstagefright_softomx_plugin.vendor
+    libavservices_minijail.vendor
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -285,9 +291,6 @@ PRODUCT_PACKAGES += \
     libpng.vendor \
     libutilscallstack.vendor
 
-# Media
-PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -325,6 +328,12 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service \
     android.hardware.health@1.0
+
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.common-V2-ndk_platform.so \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common-V2-ndk_platform.so
+
 
 # Permissions
 PRODUCT_COPY_FILES += \
