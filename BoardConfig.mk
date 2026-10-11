@@ -207,5 +207,3 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 # Inherit the proprietary files
 include vendor/xiaomi/blossom/BoardConfigVendor.mk
 
-#Miui
-include vendor/xiaomi/miuicamera/SEPolicy.mk
