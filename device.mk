@@ -258,7 +258,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libstagefright_softomx_plugin.vendor
+    libstagefright_softomx_plugin.vendor \
     libavservices_minijail.vendor
 
 # NFC
