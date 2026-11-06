@@ -545,3 +545,5 @@ PRODUCT_PACKAGES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
+$(call inherit-product, hardware/dolby/dolby.mk)
+
